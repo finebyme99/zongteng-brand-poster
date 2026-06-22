@@ -1,0 +1,44 @@
+# Guided Brief
+
+Use this reference when the user wants to create a poster but has not provided enough details. Ask all questions together. Let the user leave any field blank; infer missing answers and continue.
+
+## Guided Form
+
+Show the style overview image first when the UI supports images:
+
+- `assets/style-reference-cards/style-reference-overview.png`
+
+Then ask:
+
+1. Poster visual style: choose one from `visual-style-catalog.md`, mix two styles, or leave blank for automatic selection.
+2. Audience: all employees, frontline teams, managers, executives, candidates, partners/customers, visitors/public, or other.
+3. Poster format: vertical `1080 x 1440`, long poster, square `1080 x 1080`, meeting-room `1920 x 1080`, horizontal banner, A4/A3 print, or other.
+4. Content layout: hero slogan, event announcement, value/IP card, timeline/agenda, data/report, multi-section long poster, story/case, or free layout.
+5. Copy: provide title/subtitle/body/CTA, or say "help me write".
+6. Must-use elements: group logo, HRAS logo, specific value mascot, all four values, meeting-room template, photo, QR code, or none.
+7. Other requirements: tone, colors to avoid, mandatory wording, export type, deadline, editable source, or approval constraints.
+
+## Automatic Defaults
+
+If the user leaves fields blank:
+
+- Choose `event-campaign` for general internal/culture posters.
+- Choose `corporate-blue-orange` for formal group announcements.
+- Choose `values-ip-card` if the topic mentions values, culture, respect, excellence, pragmatism, win-win, recognition, employee engagement, or mascot.
+- Choose `hras-subbrand` if the topic mentions HRAS, HR, 人力, onboarding, employee services, or people operations.
+- Choose `meeting-room-screen` if the topic mentions meeting room, projection, Feishu screen, 投屏, agenda screen, or 16:9.
+- Choose `1080 x 1440` vertical if no format is given.
+- Write concise copy if the user provides only a topic.
+- Use the horizontal Zongteng Group logo unless HRAS or a special narrow layout requires another lockup.
+
+## Response Pattern
+
+After collecting or inferring the brief, summarize only the working assumptions that affect the output:
+
+- Style direction.
+- Audience.
+- Format.
+- Core message/copy approach.
+- Required brand/IP assets.
+
+Then create the poster or output spec. Do not wait for confirmation unless the user explicitly asks for review before generation.

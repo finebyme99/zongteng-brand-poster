@@ -3,8 +3,84 @@
   "usage": {
     "selection": "Read this compact index first to select a poster style family.",
     "details": "After selecting a family, read the listed reference files only.",
-    "assets": "Use asset_map entries to place exact logo and culture assets."
+    "assets": "Use asset_map entries to place exact logo and culture assets.",
+    "visual_styles": "Use visual_style_options to guide the user's style choice. Read visual-style-catalog.md for full details."
   },
+  "visual_style_overview": "assets/style-reference-cards/style-reference-overview.png",
+  "visual_style_options": [
+    {
+      "slug": "minimal-business",
+      "name": "极简商务 / Minimal Business",
+      "reference_card": "assets/style-reference-cards/01-minimal-business.png",
+      "best_for": "Formal notices, leadership messages, strategy, external-facing brand statements."
+    },
+    {
+      "slug": "neo-brutalism",
+      "name": "新粗野主义 / Neo Brutalism",
+      "reference_card": "assets/style-reference-cards/02-neo-brutalist.png",
+      "best_for": "Young, direct, high-impact internal campaigns."
+    },
+    {
+      "slug": "neo-fauvist-color",
+      "name": "新野兽派色彩 / Neo Fauvist Color",
+      "reference_card": "assets/style-reference-cards/03-neo-fauvist.png",
+      "best_for": "Festivals, culture campaigns, energetic internal activity posters."
+    },
+    {
+      "slug": "swiss-grid",
+      "name": "瑞士网格 / Swiss Grid",
+      "reference_card": "assets/style-reference-cards/04-swiss-grid.png",
+      "best_for": "Reports, process notices, policies, meeting screens."
+    },
+    {
+      "slug": "bento-grid",
+      "name": "Bento 信息卡 / Bento Grid",
+      "reference_card": "assets/style-reference-cards/05-bento-data.png",
+      "best_for": "Multi-point announcements, data, agendas, benefits, long posters."
+    },
+    {
+      "slug": "soft-3d-mascot",
+      "name": "软萌 3D IP / Soft 3D Mascot",
+      "reference_card": "assets/style-reference-cards/06-soft-3d-ip.png",
+      "best_for": "Values, employee engagement, recognition, friendly culture posters."
+    },
+    {
+      "slug": "glass-tech",
+      "name": "玻璃科技感 / Glass Tech",
+      "reference_card": "assets/style-reference-cards/07-glass-tech.png",
+      "best_for": "Digitalization, AI, HRAS platforms, technology service."
+    },
+    {
+      "slug": "editorial-collage",
+      "name": "杂志拼贴 / Editorial Collage",
+      "reference_card": "assets/style-reference-cards/08-editorial-collage.png",
+      "best_for": "Employee stories, team profiles, event recaps, culture features."
+    },
+    {
+      "slug": "cyber-neon",
+      "name": "赛博霓虹 / Cyber Neon",
+      "reference_card": "assets/style-reference-cards/09-cyber-neon.png",
+      "best_for": "Tech launches, battle reports, AI/data topics, countdowns."
+    },
+    {
+      "slug": "tactile-paper",
+      "name": "触感纸艺 / Tactile Paper",
+      "reference_card": "assets/style-reference-cards/10-tactile-paper.png",
+      "best_for": "Care, wellbeing, employee letters, holiday greetings."
+    },
+    {
+      "slug": "surreal-gradient",
+      "name": "超现实渐变 / Surreal Gradient",
+      "reference_card": "assets/style-reference-cards/11-surreal-gradient.png",
+      "best_for": "Future vision, innovation, festival visuals, campaign teasers."
+    },
+    {
+      "slug": "warm-humanist",
+      "name": "温暖人文 / Warm Humanist",
+      "reference_card": "assets/style-reference-cards/12-warm-humanist.png",
+      "best_for": "Employee stories, onboarding, culture care, recognition."
+    }
+  ],
   "style_families": [
     {
       "slug": "corporate-blue-orange",

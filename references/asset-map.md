@@ -84,3 +84,21 @@ Meeting-room projection:
 
 - `assets/poster-templates/飞书投屏模板_01.png`
 - `assets/poster-templates/评优会议室投屏(3) (1).jpg`
+
+## Visual Style Reference Cards
+
+Use these original reference cards to help users choose a poster visual direction:
+
+- Overview: `assets/style-reference-cards/style-reference-overview.png`
+- Minimal Business: `assets/style-reference-cards/01-minimal-business.png`
+- Neo Brutalism: `assets/style-reference-cards/02-neo-brutalist.png`
+- Neo Fauvist Color: `assets/style-reference-cards/03-neo-fauvist.png`
+- Swiss Grid: `assets/style-reference-cards/04-swiss-grid.png`
+- Bento Grid: `assets/style-reference-cards/05-bento-data.png`
+- Soft 3D Mascot: `assets/style-reference-cards/06-soft-3d-ip.png`
+- Glass Tech: `assets/style-reference-cards/07-glass-tech.png`
+- Editorial Collage: `assets/style-reference-cards/08-editorial-collage.png`
+- Cyber Neon: `assets/style-reference-cards/09-cyber-neon.png`
+- Tactile Paper: `assets/style-reference-cards/10-tactile-paper.png`
+- Surreal Gradient: `assets/style-reference-cards/11-surreal-gradient.png`
+- Warm Humanist: `assets/style-reference-cards/12-warm-humanist.png`
