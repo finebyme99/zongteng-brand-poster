@@ -1,13 +1,13 @@
-# Zongteng Brand Poster Skill
+# Zongteng Brand Poster Agent Kit
 
 <p align="center">
   <a href="#中文说明"><img src="assets/readme/button-zh.svg" alt="中文"></a>
   <a href="#english-guide"><img src="assets/readme/button-en.svg" alt="English"></a>
 </p>
 
-面向纵腾集团品牌与文化海报的 Codex Skill。安装后，用户无需每次重复提供纵腾 logo、品牌色、价值观 IP、HRAS 标识或投屏规范，即可通过引导式问答生成带纵腾识别度的海报。
+面向纵腾集团品牌与文化海报的通用 AI Agent 设计包。任何能读取仓库文件并生成 HTML/CSS 的 AI Agent，都可以通过本仓库直接复用纵腾 logo、品牌色、价值观 IP、HRAS 标识、投屏规范和海报风格参考。
 
-This is a Codex Skill for creating Zongteng-branded posters and culture visuals. After installation, users can generate posters with Zongteng logo assets, brand colors, value IP mascots, HRAS identity, and meeting-room poster rules without re-uploading brand materials each time.
+This is an agent-compatible poster design kit for Zongteng-branded visuals. Any AI agent that can read repository files and generate HTML/CSS can reuse the bundled Zongteng logo assets, brand colors, value IP mascots, HRAS identity, meeting-room poster rules, and poster style references.
 
 ![Style reference overview](assets/style-reference-cards/style-reference-overview.png)
 
@@ -15,39 +15,58 @@ This is a Codex Skill for creating Zongteng-branded posters and culture visuals.
 
 <p align="right"><a href="#english-guide">Switch to English</a></p>
 
-### 这个 Skill 能做什么
+### 这个 Agent Kit 能做什么
 
 - 生成纵腾集团品牌海报、文化海报、活动海报、价值观海报、员工关怀海报、评优/表彰海报。
 - 支持 HRAS / 人力综合条线相关海报。
 - 支持会议室投屏、飞书传播图、长图海报、方图、横幅、A4/A3 打印海报等格式。
-- 通过引导式问题收集需求，也支持用户选择内置风格、混合风格、描述期望风格，或不填写完整信息由 Codex 自动判断。
+- 通过引导式问题收集需求，也支持用户选择内置风格、混合风格、描述期望风格，或不填写完整信息由 AI Agent 自动判断。
 - 默认使用 HTML/CSS 生成海报，再导出 PNG/PDF，避免 AI 直接生图导致中文文字错乱。
 
-### 安装方式
+### 通用使用方式
 
-在 Codex 环境中运行：
+1. 克隆或下载这个公开仓库：
+
+```bash
+git clone https://github.com/finebyme99/zongteng-brand-poster.git
+```
+
+2. 在任意 AI Agent 中打开这个仓库，或把仓库链接/文件提供给 Agent。
+
+3. 让 Agent 先读取通用入口：
+
+```text
+请先读取 AGENTS.md，然后按这个仓库里的纵腾品牌规范、素材和风格参考，帮我生成一张海报。
+```
+
+如果你的 Agent 会自动读取仓库指令文件，可以直接提出需求：
+
+```text
+做一张纵腾价值观海报，主题是尊重，面向全体员工，风格偏年轻但保持品牌感。
+```
+
+### 已适配的 Agent 入口
+
+- `AGENTS.md`：通用 AI Agent 主入口，推荐所有 Agent 读取。
+- `CLAUDE.md`：Claude / Claude Code 入口。
+- `GEMINI.md`：Gemini CLI / Gemini Agent 入口。
+- `.cursor/rules/zongteng-brand-poster.mdc` 和 `.cursorrules`：Cursor 入口。
+- `.windsurfrules`：Windsurf 入口。
+- `SKILL.md` 和 `agents/openai.yaml`：OpenAI / Codex 兼容入口，保留为可选安装方式。
+
+### OpenAI / Codex 兼容安装（可选）
+
+如果你使用支持 Skill 安装的 OpenAI / Codex 环境，可以运行：
 
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo finebyme99/zongteng-brand-poster --path . --name zongteng-brand-poster
 ```
 
-安装完成后重启 Codex，让新 Skill 生效。
+安装完成后重启对应 Agent，让新入口生效。
 
-### 基础用法
+### 引导式填写内容
 
-在 Codex 中输入：
-
-```text
-Use $zongteng-brand-poster to create a Zongteng culture poster.
-```
-
-或直接中文说明需求：
-
-```text
-用 $zongteng-brand-poster 做一张纵腾价值观海报，主题是尊重，面向全体员工。
-```
-
-如果信息不完整，Skill 会引导你填写：
+如果信息不完整，Agent 会引导你填写：
 
 - 海报视觉风格：可选示例风格、混合两个风格、直接描述期望风格，或留空自动判断
 - 面向人群
@@ -60,7 +79,7 @@ Use $zongteng-brand-poster to create a Zongteng culture poster.
 如果你不想填写，可以直接说：
 
 ```text
-用 $zongteng-brand-poster 做一张纵腾内部活动海报，其他你来定。
+做一张纵腾内部活动海报，其他你来定。
 ```
 
 ### 可选视觉风格
@@ -80,7 +99,7 @@ Use $zongteng-brand-poster to create a Zongteng culture poster.
 - 液态超现实
 - 温暖人文
 
-这些风格不是 PPT 模板，也不是直接复制网页截图，而是可用 HTML/CSS 落地的海报视觉方向。你也可以直接描述想要的感觉，例如“像高端科技官网首屏”“像设计工作室作品集”“更年轻、更有冲击力”，Skill 会映射到最接近的风格或生成自定义方向。
+这些风格不是 PPT 模板，也不是直接复制网页截图，而是可用 HTML/CSS 落地的海报视觉方向。你也可以直接描述想要的感觉，例如“像高端科技官网首屏”“像设计工作室作品集”“更年轻、更有冲击力”，Agent 会映射到最接近的风格或生成自定义方向。
 
 ### 输出原则
 
@@ -112,26 +131,26 @@ node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height
 ### 适合的使用示例
 
 ```text
-用 $zongteng-brand-poster 做一张 1080x1440 纵腾价值观海报，主题是共赢，风格活泼一点。
+请读取 AGENTS.md，做一张 1080x1440 纵腾价值观海报，主题是共赢，风格活泼一点。
 ```
 
 ```text
-用 $zongteng-brand-poster 做一张 HRAS 招新活动海报，面向内部员工，帮我写文案。
+基于这个仓库的纵腾规范，做一张 HRAS 招新活动海报，面向内部员工，帮我写文案。
 ```
 
 ```text
-用 $zongteng-brand-poster 做一张会议室 16:9 投屏海报，主题是月度评优。
+做一张会议室 16:9 投屏海报，主题是月度评优。
 ```
 
 ```text
-用 $zongteng-brand-poster 做一张长图海报，介绍纵腾文化活动流程，风格用 Bento 信息卡。
+做一张长图海报，介绍纵腾文化活动流程，风格用 Bento 信息卡。
 ```
 
 ## English Guide
 
 <p align="right"><a href="#中文说明">切换到中文</a></p>
 
-### What This Skill Does
+### What This Agent Kit Does
 
 - Creates Zongteng Group brand posters, culture posters, campaign posters, value posters, employee care posters, and recognition posters.
 - Supports HRAS / People Operations posters.
@@ -139,31 +158,50 @@ node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height
 - Guides users through a short brief, while supporting built-in style choices, mixed styles, custom style descriptions, and automatic decisions when users leave fields blank.
 - Uses HTML/CSS first, then exports PNG/PDF, so Chinese text remains accurate and readable.
 
-### Installation
+### Generic Usage
 
-Run this in your Codex environment:
+1. Clone or download this public repository:
+
+```bash
+git clone https://github.com/finebyme99/zongteng-brand-poster.git
+```
+
+2. Open the repository in any AI agent, or provide the repository link/files to the agent.
+
+3. Ask the agent to read the generic entry point first:
+
+```text
+Read AGENTS.md first, then use the Zongteng brand rules, assets, and style references in this repository to create a poster.
+```
+
+If your agent automatically reads repository instruction files, you can directly provide the poster brief:
+
+```text
+Create a Zongteng value poster about Respect for all employees. Make it youthful while keeping the brand recognizable.
+```
+
+### Supported Agent Entry Points
+
+- `AGENTS.md`: generic entry point for AI agents; recommended for all agents.
+- `CLAUDE.md`: Claude / Claude Code entry point.
+- `GEMINI.md`: Gemini CLI / Gemini Agent entry point.
+- `.cursor/rules/zongteng-brand-poster.mdc` and `.cursorrules`: Cursor entry points.
+- `.windsurfrules`: Windsurf entry point.
+- `SKILL.md` and `agents/openai.yaml`: OpenAI / Codex-compatible optional entry points.
+
+### OpenAI / Codex-Compatible Installation Optional
+
+If you use an OpenAI / Codex environment that supports Skill installation, run:
 
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo finebyme99/zongteng-brand-poster --path . --name zongteng-brand-poster
 ```
 
-Restart Codex after installation.
+Restart the corresponding agent after installation.
 
-### Basic Usage
+### Guided Brief Fields
 
-In Codex, type:
-
-```text
-Use $zongteng-brand-poster to create a Zongteng culture poster.
-```
-
-You can also provide a more specific request:
-
-```text
-Use $zongteng-brand-poster to create a Zongteng value poster about Respect for all employees.
-```
-
-When details are missing, the Skill guides you through:
+When details are missing, the agent guides you through:
 
 - Visual style: choose a sample style, mix two styles, describe the desired style, or leave it blank for automatic selection
 - Audience
@@ -173,15 +211,15 @@ When details are missing, the Skill guides you through:
 - Required brand or IP elements
 - Other constraints
 
-If you want Codex to decide, say:
+If you want the agent to decide, say:
 
 ```text
-Use $zongteng-brand-poster to create an internal campaign poster. Decide the rest for me.
+Create an internal Zongteng campaign poster. Decide the rest for me.
 ```
 
 ### Visual Style Options
 
-The Skill includes 12 poster style directions, refreshed from current web-design inspiration patterns such as hero pages, portfolios, interactive sites, and curated design galleries:
+The kit includes 12 poster style directions, refreshed from current web-design inspiration patterns such as hero pages, portfolios, interactive sites, and curated design galleries:
 
 - Minimal Business
 - Neo Brutalism
@@ -196,7 +234,7 @@ The Skill includes 12 poster style directions, refreshed from current web-design
 - Liquid Gradient World
 - Warm Humanist
 
-These are poster design directions, not PowerPoint templates or copied website screenshots. You can also describe the style you want, such as "premium tech landing page", "design studio portfolio", or "younger and more high-impact"; the Skill will map it to the closest style or create a custom Zongteng-compliant direction.
+These are poster design directions, not PowerPoint templates or copied website screenshots. You can also describe the style you want, such as "premium tech landing page", "design studio portfolio", or "younger and more high-impact"; the agent will map it to the closest style or create a custom Zongteng-compliant direction.
 
 ### Output Principles
 
@@ -228,30 +266,36 @@ The script uses Playwright. If Chromium is missing on first run, follow the Play
 ### Example Prompts
 
 ```text
-Use $zongteng-brand-poster to create a 1080x1440 poster for the value Win-Win. Make it energetic and employee-facing.
+Read AGENTS.md and create a 1080x1440 Zongteng value poster for Win-Win. Make it energetic and employee-facing.
 ```
 
 ```text
-Use $zongteng-brand-poster to create an HRAS recruiting activity poster for internal employees. Help write the copy.
+Use this repository's Zongteng rules to create an HRAS recruiting activity poster for internal employees. Help write the copy.
 ```
 
 ```text
-Use $zongteng-brand-poster to create a 16:9 meeting-room screen poster for monthly recognition.
+Create a 16:9 meeting-room screen poster for monthly recognition.
 ```
 
 ```text
-Use $zongteng-brand-poster to create a long poster explaining a Zongteng culture activity flow. Use a Bento Grid style.
+Create a long poster explaining a Zongteng culture activity flow. Use a Bento Grid style.
 ```
 
 ## Repository Structure
 
 ```text
 .
+├── AGENTS.md
+├── CLAUDE.md
+├── GEMINI.md
 ├── SKILL.md
+├── .cursor/rules/zongteng-brand-poster.mdc
+├── .cursorrules
+├── .windsurfrules
 ├── agents/openai.yaml
 ├── references/
 ├── assets/
-└── scripts/export-html-poster.mjs
+└── scripts/
 ```
 
 ## Notes

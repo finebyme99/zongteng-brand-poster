@@ -18,7 +18,7 @@ Then ask:
 6. Must-use elements: group logo, HRAS logo, specific value mascot, all four values, meeting-room template, photo, QR code, or none.
 7. Other requirements: tone, colors to avoid, mandatory wording, export type, deadline, editable source, or approval constraints.
 
-Do not ask whether the user wants PPT. This skill creates posters. If an export type is requested, offer HTML source, PNG, or PDF.
+Do not ask whether the user wants PPT. This agent kit creates posters. If an export type is requested, offer HTML source, PNG, or PDF.
 
 ## Custom Style Descriptions
 

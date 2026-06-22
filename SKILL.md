@@ -1,9 +1,11 @@
 ---
 name: zongteng-brand-poster
-description: Create Zongteng-branded posters, culture campaign visuals, values posters, meeting-room projection posters, HRAS sub-brand graphics, event posters, recognition posters, and social media poster layouts using bundled Zongteng logo, VI rules, brand colors, typography, value IP mascots, and poster templates. Use when the user wants a poster or visual design that should clearly feel like Zongteng without re-providing brand materials.
+description: Agent-compatible guide for creating Zongteng-branded posters, culture campaign visuals, values posters, meeting-room projection posters, HRAS sub-brand graphics, event posters, recognition posters, and social media poster layouts using bundled Zongteng logo, VI rules, brand colors, typography, value IP mascots, and poster templates. Use when the user wants a poster or visual design that should clearly feel like Zongteng without re-providing brand materials.
 ---
 
 # Zongteng Brand Poster
+
+This file is the OpenAI/Codex-compatible entry point for the agent-agnostic Zongteng poster kit. `AGENTS.md` is the canonical cross-agent instruction file. If this file is loaded directly, follow the rules below; if your agent can read repository instructions, read `AGENTS.md` first and use this file as a compatibility adapter.
 
 Create guided or automatic HTML/CSS posters and campaign visuals that carry recognizable Zongteng Group identity and culture elements.
 
