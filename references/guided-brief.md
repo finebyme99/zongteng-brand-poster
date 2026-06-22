@@ -18,6 +18,8 @@ Then ask:
 6. Must-use elements: group logo, HRAS logo, specific value mascot, all four values, meeting-room template, photo, QR code, or none.
 7. Other requirements: tone, colors to avoid, mandatory wording, export type, deadline, editable source, or approval constraints.
 
+Do not ask whether the user wants PPT. This skill creates posters. If an export type is requested, offer HTML source, PNG, or PDF.
+
 ## Automatic Defaults
 
 If the user leaves fields blank:
@@ -30,6 +32,7 @@ If the user leaves fields blank:
 - Choose `1080 x 1440` vertical if no format is given.
 - Write concise copy if the user provides only a topic.
 - Use the horizontal Zongteng Group logo unless HRAS or a special narrow layout requires another lockup.
+- Create an HTML/CSS poster and export PNG if the user asks for an image.
 
 ## Response Pattern
 

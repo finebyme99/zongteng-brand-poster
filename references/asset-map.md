@@ -85,6 +85,10 @@ Meeting-room projection:
 - `assets/poster-templates/飞书投屏模板_01.png`
 - `assets/poster-templates/评优会议室投屏(3) (1).jpg`
 
+## Export Script
+
+- `scripts/export-html-poster.mjs`: render an HTML/CSS poster to PNG or PDF with browser text rendering.
+
 ## Visual Style Reference Cards
 
 Use these original reference cards to help users choose a poster visual direction:

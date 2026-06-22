@@ -88,7 +88,7 @@
       "mood": ["formal", "reliable", "global", "infrastructure", "professional"],
       "best_for": "Group brand posters, formal announcements, strategy, external-facing communication, service positioning, executive/internal authority contexts.",
       "avoid_for": "Very playful employee culture scenes where value IP should lead.",
-      "references": ["brand-core.md", "visual-rules.md", "asset-map.md", "poster-formats.md"],
+      "references": ["brand-core.md", "visual-rules.md", "asset-map.md", "poster-formats.md", "html-poster-output.md"],
       "default_assets": ["assets/group-logo/20260622-102250.png"],
       "palette": ["#051D49", "#EF7622", "#FFFFFF"],
       "typography": "Source Han Sans / 思源黑体"
@@ -99,7 +99,7 @@
       "mood": ["friendly", "culture", "bright", "rounded", "employee-facing"],
       "best_for": "Values posters, culture communication, employee engagement, festival greetings, internal recognition, team activities.",
       "avoid_for": "Board, legal, compliance, investor, or serious external posters.",
-      "references": ["brand-core.md", "visual-rules.md", "values-ip.md", "asset-map.md", "poster-formats.md"],
+      "references": ["brand-core.md", "visual-rules.md", "values-ip.md", "asset-map.md", "poster-formats.md", "html-poster-output.md"],
       "default_assets": ["assets/values-ip/values-cards.png", "assets/values-ip/mascot-roles.png"],
       "palette": ["value-specific"],
       "typography": "Rounded bold display plus Source Han Sans body"
@@ -110,7 +110,7 @@
       "mood": ["clear", "screen-readable", "structured", "quiet"],
       "best_for": "Feishu projection posters, meeting-room screens, 16:9 agenda or recognition screen visuals.",
       "avoid_for": "Long mobile posters and dense reading materials.",
-      "references": ["brand-core.md", "visual-rules.md", "poster-formats.md", "asset-map.md"],
+      "references": ["brand-core.md", "visual-rules.md", "poster-formats.md", "asset-map.md", "html-poster-output.md"],
       "default_assets": ["assets/poster-templates/飞书投屏模板_01.png", "assets/group-logo/20260622-102250.png"],
       "palette": ["#051D49", "#EF7622", "#FFFFFF", "#4B5563"],
       "typography": "Large Source Han Sans / 思源黑体"
@@ -121,7 +121,7 @@
       "mood": ["employee-service", "clean", "trustworthy", "warm"],
       "best_for": "HRAS, 人力综合条线, employee service, HR operations, onboarding, internal HR campaigns.",
       "avoid_for": "General group brand posters unrelated to HRAS.",
-      "references": ["brand-core.md", "visual-rules.md", "hras-subbrand.md", "values-ip.md", "asset-map.md", "poster-formats.md"],
+      "references": ["brand-core.md", "visual-rules.md", "hras-subbrand.md", "values-ip.md", "asset-map.md", "poster-formats.md", "html-poster-output.md"],
       "default_assets": ["assets/hras-logo/hras-logo.png", "assets/hras-logo/icon-wordmark-cn/full-color.png"],
       "palette": ["#051D49", "#EF7622", "#FFFFFF"],
       "typography": "Source Han Sans / 思源黑体"
@@ -132,7 +132,7 @@
       "mood": ["energetic", "internal", "approachable", "branded"],
       "best_for": "Internal activity posters, campaign teasers, holiday posters, recognition announcements, mixed culture-brand visuals.",
       "avoid_for": "Highly formal group identity pages requiring strict VI restraint.",
-      "references": ["brand-core.md", "visual-rules.md", "values-ip.md", "asset-map.md", "poster-formats.md"],
+      "references": ["brand-core.md", "visual-rules.md", "values-ip.md", "asset-map.md", "poster-formats.md", "html-poster-output.md"],
       "default_assets": ["assets/group-logo/20260622-102250.png", "assets/values-ip/mascot-lineup.png"],
       "palette": ["#051D49", "#EF7622", "value-specific accents"],
       "typography": "Strong Source Han Sans headlines with friendly accent treatments"

@@ -5,13 +5,17 @@ description: Create Zongteng-branded posters, culture campaign visuals, values p
 
 # Zongteng Brand Poster
 
-Create guided or automatic posters and campaign visuals that carry recognizable Zongteng Group identity and culture elements.
+Create guided or automatic HTML/CSS posters and campaign visuals that carry recognizable Zongteng Group identity and culture elements.
 
 ## Core Rule
 
 Use the bundled brand assets and references. Do not ask the user to provide Zongteng logo, values, mascot roles, colors, or meeting-room poster rules unless they want to override or add new materials.
 
 Never redraw, reinterpret, recolor, stretch, or invent the Zongteng logo. Use exact files from `assets/group-logo/` or `assets/hras-logo/` and composite them into the final poster when a logo is needed.
+
+Produce posters, not presentations. Do not create PPT/PPTX, slide decks, or deck-like multi-slide outputs unless the user explicitly asks for a presentation. Default to one designed poster or one long poster.
+
+Use HTML/CSS as the primary production format. Keep all Chinese and required copy as real HTML text, then export the rendered poster to PNG/PDF. Do not use AI image generation to create a full poster containing Chinese text, because generated Chinese text often becomes distorted or incorrect.
 
 ## Workflow
 
@@ -23,9 +27,10 @@ Never redraw, reinterpret, recolor, stretch, or invent the Zongteng logo. Use ex
 4. Read `references/style-index.json` and, when choosing visual style, read `references/visual-style-catalog.md`.
 5. Select the matching brand style family and one visual style direction.
 6. Create the poster in the requested format:
-   - For image output: generate the background/illustration first, then place exact logo/IP assets on top when possible.
-   - For editable output: create an HTML/CSS poster or source layout using exact bundled assets.
-   - For prompts/specs only: write a production prompt and layout spec that explicitly references the required assets.
+   - For image output: create an HTML/CSS poster first, then export it to PNG/PDF with `scripts/export-html-poster.mjs`.
+   - For editable output: deliver the HTML/CSS poster source using exact bundled assets.
+   - For generated illustration needs: generate only background art, texture, or mascot-like illustration without final Chinese text, then layer real HTML text and exact logo assets on top.
+   - For prompts/specs only: write a production prompt and layout spec that explicitly references the required assets and the HTML text-rendering requirement.
 7. Verify brand fit before delivery: logo integrity, color palette, value/IP mapping, legibility, spacing, and format ratio.
 
 ## Reference Routing
@@ -38,6 +43,7 @@ Never redraw, reinterpret, recolor, stretch, or invent the Zongteng logo. Use ex
 - Read `references/style-index.json` before choosing a style family.
 - Read `references/guided-brief.md` when the user needs guided input collection.
 - Read `references/visual-style-catalog.md` when presenting or selecting poster visual styles.
+- Read `references/html-poster-output.md` before generating final poster files.
 
 ## Poster Type Selection
 
@@ -75,10 +81,12 @@ Before delivering, ensure:
 - HRAS logo is used only for HRAS or people-line scenarios.
 - Text remains readable at the target display size.
 - Long posters have strong hierarchy and section rhythm instead of simply stretching a screen layout.
+- Chinese text is rendered as browser text in HTML, not baked into an AI-generated image.
+- The output is a poster file or poster source, not a PPT or slide deck.
 
 ## Output Expectations
 
-Deliver the final poster file, editable layout, or prompt/spec requested by the user. Include file links for anything the user needs to run or open.
+Deliver the final HTML poster, exported PNG/PDF, editable layout, or prompt/spec requested by the user. Include file links for anything the user needs to run or open.
 
 When the user asks for a "Zongteng-style poster" without specifying details, default to:
 

@@ -2,6 +2,8 @@
 
 Use this reference when choosing layout size, ratio, and format behavior.
 
+All formats below are poster canvases. Do not interpret `16:9` as a presentation slide deck; it is a single screen poster.
+
 ## Default Poster
 
 When the user does not specify a size, use a vertical internal/social poster:
@@ -75,3 +77,7 @@ Use A4/A3 only when the user asks for print:
 - A3 portrait: public area posters.
 - Ensure logo size follows VI minimum size guidance.
 - Use high contrast and avoid tiny text.
+
+## Output Source
+
+Build these formats as HTML/CSS poster canvases and export to PNG/PDF. Keep Chinese text as real DOM text until export.

@@ -8,6 +8,8 @@ Show the overview image when possible:
 
 Individual reference cards live in `assets/style-reference-cards/`.
 
+The reference cards are poster-style visual references, not PPT templates. Use them to choose a poster direction, then build the final poster as HTML/CSS with real text.
+
 ## Style Options
 
 ### 01 极简商务 / Minimal Business
