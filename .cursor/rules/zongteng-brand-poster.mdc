@@ -1,9 +1,9 @@
 ---
-description: Zongteng-branded poster generation using bundled brand assets and HTML/CSS output
+description: Zongteng-branded poster generation using the bundled agent kit
 globs: "**/*"
 alwaysApply: true
 ---
 
-Use `AGENTS.md` as the canonical instruction file for Zongteng-branded poster generation.
+Use `zongteng-brand-poster/AGENTS.md` as the canonical instruction file for Zongteng-branded poster generation.
 
-For poster tasks, read `AGENTS.md` first, then use the referenced files in `references/`, `assets/`, and `scripts/`. Create HTML/CSS posters with real Chinese text. Do not default to PPT, slide decks, or full AI-generated images containing Chinese text.
+For poster tasks, use the bundled references, assets, and scripts under `zongteng-brand-poster/`. Create designed HTML/CSS posters with real Chinese text. Do not produce PPT-style layouts.

@@ -66,3 +66,16 @@ Use them as:
 - Low-opacity texture behind titles or data.
 
 Keep auxiliary graphics secondary to the message and logo.
+
+## Poster Quality
+
+Read `design-quality-bar.md` before creating final poster files.
+
+The poster must look designed, not like a PowerPoint page. Use a dominant hero visual, campaign composition, texture, motion, layering, or mascot/IP scene. Supporting cards and detail blocks are allowed only as secondary information areas.
+
+Avoid:
+
+- Centered title plus equal cards.
+- Pale grid background plus generic circles as the main visual.
+- Dashboard-like information blocks unless the user explicitly asked for a report poster.
+- Slide-like spacing where all content sits in neat rectangles with no visual tension.

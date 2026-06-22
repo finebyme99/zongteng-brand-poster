@@ -1,5 +1,5 @@
-# Zongteng Brand Poster
+# Zongteng Brand Poster Agent Kit
 
-Follow `AGENTS.md` as the canonical instruction file for this repository.
+Follow `zongteng-brand-poster/AGENTS.md` as the canonical instruction file.
 
-When asked to create a Zongteng poster, read `AGENTS.md`, then use the referenced files in `references/`, `assets/`, and `scripts/`. Create posters with HTML/CSS and real Chinese text; do not default to PPT or full AI-generated images with embedded Chinese text.
+For poster tasks, use the bundled references, assets, and scripts under `zongteng-brand-poster/`. Create designed HTML/CSS posters with real Chinese text; do not produce PPT-style layouts.

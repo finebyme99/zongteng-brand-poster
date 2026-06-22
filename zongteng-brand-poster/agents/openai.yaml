@@ -1,0 +1,5 @@
+interface:
+  display_name: "Zongteng Brand Poster"
+  short_description: "Create designed Zongteng posters, with guided brief first"
+  brand_color: "#051D49"
+  default_prompt: "Create a Zongteng-branded culture poster. Guide me through the brief first, avoid PPT-style layouts, and use a strong poster visual concept."

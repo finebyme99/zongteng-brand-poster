@@ -1,13 +1,13 @@
 ---
 name: zongteng-brand-poster
-description: Agent-compatible guide for creating Zongteng-branded posters, culture campaign visuals, values posters, meeting-room projection posters, HRAS sub-brand graphics, event posters, recognition posters, and social media poster layouts using bundled Zongteng logo, VI rules, brand colors, typography, value IP mascots, and poster templates. Use when the user wants a poster or visual design that should clearly feel like Zongteng without re-providing brand materials.
+description: Agent-compatible guide for creating Zongteng-branded posters, culture campaign visuals, values posters, meeting-room projection posters, HRAS sub-brand graphics, event posters, recognition posters, and social media poster layouts using bundled Zongteng logo, VI rules, brand colors, typography, value IP mascots, and poster templates. Use when the user wants a poster or visual design that should clearly feel like Zongteng without re-providing brand materials. For new poster requests, ask the guided brief first and wait unless the user explicitly asks for direct generation. Never create PPT-style posters; require strong poster design, hero visuals, hierarchy, texture, motion, or campaign-level visual impact.
 ---
 
 # Zongteng Brand Poster
 
 This file is the OpenAI/Codex-compatible entry point for the agent-agnostic Zongteng poster kit. `AGENTS.md` is the canonical cross-agent instruction file. If this file is loaded directly, follow the rules below; if your agent can read repository instructions, read `AGENTS.md` first and use this file as a compatibility adapter.
 
-Create guided or automatic HTML/CSS posters and campaign visuals that carry recognizable Zongteng Group identity and culture elements.
+Create guided HTML/CSS posters and campaign visuals that carry recognizable Zongteng Group identity and culture elements.
 
 ## Core Rule
 
@@ -17,23 +17,26 @@ Never redraw, reinterpret, recolor, stretch, or invent the Zongteng logo. Use ex
 
 Produce posters, not presentations. Do not create PPT/PPTX, slide decks, or deck-like multi-slide outputs unless the user explicitly asks for a presentation. Default to one designed poster or one long poster.
 
+Never produce PPT-style poster layouts. Avoid centered titles with equal cards, pale dashboard grids, generic icon circles, and slide-like information blocks. Read `references/design-quality-bar.md` and create a poster with a strong hero visual, clear visual hierarchy, texture/motion/layering, and campaign-level design impact.
+
 Use HTML/CSS as the primary production format. Keep all Chinese and required copy as real HTML text, then export the rendered poster to PNG/PDF. Do not use AI image generation to create a full poster containing Chinese text, because generated Chinese text often becomes distorted or incorrect.
 
 ## Workflow
 
-1. Decide whether to run guided mode or automatic mode.
-   - Guided mode: if the user asks to create a poster and has not provided enough details, ask the guided questions from `references/guided-brief.md`.
-   - Automatic mode: if the user says to decide for them, skips fields, or gives only content/topic, infer the missing answers and continue.
+1. Run guided mode by default for a new poster request.
+   - Ask the guided questions from `references/guided-brief.md` and wait for the user's answer before creating final files.
+   - Only skip waiting if the user explicitly says "直接生成", "不用问", "按默认来", "其他你定", "decide for me", or equivalent.
+   - If the user skips fields, infer the missing answers after the one guided pass.
 2. Identify the poster type and audience from the brief.
 3. Read the relevant reference files only.
 4. Read `references/style-index.json` and, when choosing visual style, read `references/visual-style-catalog.md`.
-5. Select the matching brand style family and one visual style direction.
+5. Read `references/design-quality-bar.md`, then select the matching brand style family and one visual style direction.
 6. Create the poster in the requested format:
    - For image output: create an HTML/CSS poster first, then export it to PNG/PDF with `scripts/export-html-poster.mjs`.
    - For editable output: deliver the HTML/CSS poster source using exact bundled assets.
    - For generated illustration needs: generate only background art, texture, or mascot-like illustration without final Chinese text, then layer real HTML text and exact logo assets on top.
    - For prompts/specs only: write a production prompt and layout spec that explicitly references the required assets and the HTML text-rendering requirement.
-7. Verify brand fit before delivery: logo integrity, color palette, value/IP mapping, legibility, spacing, and format ratio.
+7. Verify brand fit and design quality before delivery: logo integrity, color palette, value/IP mapping, legibility, spacing, format ratio, strong poster composition, and no PPT-like layout.
 
 ## Reference Routing
 
@@ -43,6 +46,7 @@ Use HTML/CSS as the primary production format. Keep all Chinese and required cop
 - Read `references/poster-formats.md` when the output size, meeting-room projection, long poster, social image, or print format matters.
 - Read `references/asset-map.md` when choosing logo, mascot, or template source files.
 - Read `references/style-index.json` before choosing a style family.
+- Read `references/design-quality-bar.md` before creating the final poster.
 - Read `references/guided-brief.md` when the user needs guided input collection.
 - Read `references/visual-style-catalog.md` when presenting or selecting poster visual styles.
 - Read `references/html-poster-output.md` before generating final poster files.
@@ -73,6 +77,8 @@ Allow the user to leave any field blank. Infer missing fields from the user's to
 
 If the user describes a desired style instead of choosing a style card, translate the description into concrete design attributes: mood, typography, layout density, color temperature, image/texture treatment, and motion/interaction-inspired details. Match it to the closest one or two catalog styles when possible; if no catalog style fits, create a custom HTML/CSS poster direction while keeping the Zongteng logo, brand colors, values/IP mapping, and real-text output rules intact.
 
+After asking the guided questions, stop and wait for the user's answer unless they explicitly asked you to decide and generate immediately.
+
 ## Brand Checks
 
 Before delivering, ensure:
@@ -85,6 +91,7 @@ Before delivering, ensure:
 - HRAS logo is used only for HRAS or people-line scenarios.
 - Text remains readable at the target display size.
 - Long posters have strong hierarchy and section rhythm instead of simply stretching a screen layout.
+- Posters have a campaign-level hero visual or visual system, not a PPT-like set of cards.
 - Chinese text is rendered as browser text in HTML, not baked into an AI-generated image.
 - The output is a poster file or poster source, not a PPT or slide deck.
 
@@ -98,4 +105,4 @@ When the user asks for a "Zongteng-style poster" without specifying details, def
 - 1080 x 1440 vertical social/internal poster.
 - Zongteng Group horizontal logo.
 - Zongteng Blue and Orange accents.
-- A clean corporate layout with one culture/IP element if the topic is people or culture.
+- A campaign-poster composition with a dominant hero visual and one culture/IP or brand-energy element if the topic is people or culture.

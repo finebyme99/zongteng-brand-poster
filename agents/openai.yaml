@@ -1,5 +1,0 @@
-interface:
-  display_name: "Zongteng Brand Poster"
-  short_description: "Create Zongteng branded posters with agent-compatible instructions"
-  brand_color: "#051D49"
-  default_prompt: "Create a Zongteng-branded culture poster and guide me through the brief."

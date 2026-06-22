@@ -1,15 +1,15 @@
 # Zongteng Brand Poster Agent Kit
 
 <p align="center">
-  <a href="#中文说明"><img src="assets/readme/button-zh.svg" alt="中文"></a>
-  <a href="#english-guide"><img src="assets/readme/button-en.svg" alt="English"></a>
+  <a href="#中文说明"><img src="zongteng-brand-poster/assets/readme/button-zh.svg" alt="中文"></a>
+  <a href="#english-guide"><img src="zongteng-brand-poster/assets/readme/button-en.svg" alt="English"></a>
 </p>
 
-面向纵腾集团品牌与文化海报的通用 AI Agent 设计包。任何能读取仓库文件并生成 HTML/CSS 的 AI Agent，都可以通过本仓库直接复用纵腾 logo、品牌色、价值观 IP、HRAS 标识、投屏规范和海报风格参考。
+面向纵腾集团品牌与文化海报的通用 AI Agent 设计包。真正可安装的 Agent Kit 位于 `zongteng-brand-poster/` 子目录。任何能读取仓库文件并生成 HTML/CSS 的 AI Agent，都可以通过本仓库直接复用纵腾 logo、品牌色、价值观 IP、HRAS 标识、投屏规范和海报风格参考。
 
-This is an agent-compatible poster design kit for Zongteng-branded visuals. Any AI agent that can read repository files and generate HTML/CSS can reuse the bundled Zongteng logo assets, brand colors, value IP mascots, HRAS identity, meeting-room poster rules, and poster style references.
+This is an agent-compatible poster design kit for Zongteng-branded visuals. The installable agent kit lives in the `zongteng-brand-poster/` subdirectory. Any AI agent that can read repository files and generate HTML/CSS can reuse the bundled Zongteng logo assets, brand colors, value IP mascots, HRAS identity, meeting-room poster rules, and poster style references.
 
-![Style reference overview](assets/style-reference-cards/style-reference-overview.png)
+![Style reference overview](zongteng-brand-poster/assets/style-reference-cards/style-reference-overview.png)
 
 ## 中文说明
 
@@ -22,6 +22,7 @@ This is an agent-compatible poster design kit for Zongteng-branded visuals. Any 
 - 支持会议室投屏、飞书传播图、长图海报、方图、横幅、A4/A3 打印海报等格式。
 - 通过引导式问题收集需求，也支持用户选择内置风格、混合风格、描述期望风格，或不填写完整信息由 AI Agent 自动判断。
 - 默认使用 HTML/CSS 生成海报，再导出 PNG/PDF，避免 AI 直接生图导致中文文字错乱。
+- 强制强调海报设计感：不做 PPT 风格，不做普通信息卡片页，不做只有网格、圆环和卡片的模板化画面。
 
 ### 通用使用方式
 
@@ -36,7 +37,7 @@ git clone https://github.com/finebyme99/zongteng-brand-poster.git
 3. 让 Agent 先读取通用入口：
 
 ```text
-请先读取 AGENTS.md，然后按这个仓库里的纵腾品牌规范、素材和风格参考，帮我生成一张海报。
+请先读取 zongteng-brand-poster/AGENTS.md，然后按这个仓库里的纵腾品牌规范、素材和风格参考，帮我生成一张海报。
 ```
 
 如果你的 Agent 会自动读取仓库指令文件，可以直接提出需求：
@@ -47,26 +48,34 @@ git clone https://github.com/finebyme99/zongteng-brand-poster.git
 
 ### 已适配的 Agent 入口
 
-- `AGENTS.md`：通用 AI Agent 主入口，推荐所有 Agent 读取。
-- `CLAUDE.md`：Claude / Claude Code 入口。
-- `GEMINI.md`：Gemini CLI / Gemini Agent 入口。
-- `.cursor/rules/zongteng-brand-poster.mdc` 和 `.cursorrules`：Cursor 入口。
-- `.windsurfrules`：Windsurf 入口。
-- `SKILL.md` 和 `agents/openai.yaml`：OpenAI / Codex 兼容入口，保留为可选安装方式。
+- `zongteng-brand-poster/AGENTS.md`：通用 AI Agent 主入口，推荐所有 Agent 读取。
+- `zongteng-brand-poster/CLAUDE.md`：Claude / Claude Code 入口。
+- `zongteng-brand-poster/GEMINI.md`：Gemini CLI / Gemini Agent 入口。
+- `zongteng-brand-poster/.cursor/rules/zongteng-brand-poster.mdc` 和 `zongteng-brand-poster/.cursorrules`：Cursor 入口。
+- `zongteng-brand-poster/.windsurfrules`：Windsurf 入口。
+- `zongteng-brand-poster/SKILL.md` 和 `zongteng-brand-poster/agents/openai.yaml`：OpenAI / Codex 兼容入口，保留为可选安装方式。
 
 ### OpenAI / Codex 兼容安装（可选）
 
-如果你使用支持 Skill 安装的 OpenAI / Codex 环境，可以运行：
+如果你使用支持 Skill 安装的 OpenAI / Codex 环境，推荐运行完整安装脚本：
 
 ```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo finebyme99/zongteng-brand-poster --path . --name zongteng-brand-poster
+./scripts/install-codex-full.sh
 ```
 
-安装完成后重启对应 Agent，让新入口生效。
+或者使用官方 installer，但必须安装子目录，不能用 `--path .`：
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo finebyme99/zongteng-brand-poster --path zongteng-brand-poster --name zongteng-brand-poster --method git
+```
+
+不要使用旧命令 `--path .`。在 Codex 的 sparse checkout 安装路径下，它可能只装根目录文件，漏掉 `references/`、`assets/`、`scripts/`，导致生成效果退化。安装完成后重启对应 Agent，让新入口生效。
 
 ### 引导式填写内容
 
-如果信息不完整，Agent 会引导你填写：
+新建海报任务时，Agent 默认必须先引导你填写并等待回复；只有你明确说“直接生成 / 不用问 / 按默认来 / 其他你定”时，才会直接生成。
+
+Agent 会引导你填写：
 
 - 海报视觉风格：可选示例风格、混合两个风格、直接描述期望风格，或留空自动判断
 - 面向人群
@@ -113,6 +122,8 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
 
 - 不默认生成 PPT/PPTX。
 - 不生成多页幻灯片。
+- 不生成 PPT 风格海报：避免居中大标题 + 等分卡片、淡网格背景 + 圆环图标、仪表盘式信息页。
+- 必须有主视觉或 campaign poster 级别的画面概念，例如笔刷能量、IP 角色主视觉、编辑拼贴、科技竞技场、强动势背景等。
 - 不用 AI 图片模型直接生成包含中文文字的整张海报。
 - 中文标题、正文、日期、部门、姓名等必须保留为 HTML 真实文本，再通过浏览器截图导出。
 - logo 必须使用仓库内原始素材，不要重画、改色、拉伸或变形。
@@ -122,8 +133,8 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
 仓库提供导出脚本：
 
 ```bash
-node scripts/export-html-poster.mjs poster.html poster.png --width 1080 --height 1440
-node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height 1440 --pdf
+node zongteng-brand-poster/scripts/export-html-poster.mjs poster.html poster.png --width 1080 --height 1440
+node zongteng-brand-poster/scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height 1440 --pdf
 ```
 
 脚本依赖 Playwright。如果首次运行提示缺少浏览器，请按提示安装 Chromium。
@@ -131,7 +142,7 @@ node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height
 ### 适合的使用示例
 
 ```text
-请读取 AGENTS.md，做一张 1080x1440 纵腾价值观海报，主题是共赢，风格活泼一点。
+请读取 zongteng-brand-poster/AGENTS.md，做一张 1080x1440 纵腾价值观海报，主题是共赢，风格活泼一点。
 ```
 
 ```text
@@ -157,6 +168,7 @@ node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height
 - Supports meeting-room screen posters, Feishu/social images, long posters, square cards, banners, and A4/A3 print posters.
 - Guides users through a short brief, while supporting built-in style choices, mixed styles, custom style descriptions, and automatic decisions when users leave fields blank.
 - Uses HTML/CSS first, then exports PNG/PDF, so Chinese text remains accurate and readable.
+- Enforces poster-level visual design: no PPT-style layouts, no plain information-card pages, and no generic grid/circle/card templates.
 
 ### Generic Usage
 
@@ -171,7 +183,7 @@ git clone https://github.com/finebyme99/zongteng-brand-poster.git
 3. Ask the agent to read the generic entry point first:
 
 ```text
-Read AGENTS.md first, then use the Zongteng brand rules, assets, and style references in this repository to create a poster.
+Read zongteng-brand-poster/AGENTS.md first, then use the Zongteng brand rules, assets, and style references in this repository to create a poster.
 ```
 
 If your agent automatically reads repository instruction files, you can directly provide the poster brief:
@@ -182,26 +194,34 @@ Create a Zongteng value poster about Respect for all employees. Make it youthful
 
 ### Supported Agent Entry Points
 
-- `AGENTS.md`: generic entry point for AI agents; recommended for all agents.
-- `CLAUDE.md`: Claude / Claude Code entry point.
-- `GEMINI.md`: Gemini CLI / Gemini Agent entry point.
-- `.cursor/rules/zongteng-brand-poster.mdc` and `.cursorrules`: Cursor entry points.
-- `.windsurfrules`: Windsurf entry point.
-- `SKILL.md` and `agents/openai.yaml`: OpenAI / Codex-compatible optional entry points.
+- `zongteng-brand-poster/AGENTS.md`: generic entry point for AI agents; recommended for all agents.
+- `zongteng-brand-poster/CLAUDE.md`: Claude / Claude Code entry point.
+- `zongteng-brand-poster/GEMINI.md`: Gemini CLI / Gemini Agent entry point.
+- `zongteng-brand-poster/.cursor/rules/zongteng-brand-poster.mdc` and `zongteng-brand-poster/.cursorrules`: Cursor entry points.
+- `zongteng-brand-poster/.windsurfrules`: Windsurf entry point.
+- `zongteng-brand-poster/SKILL.md` and `zongteng-brand-poster/agents/openai.yaml`: OpenAI / Codex-compatible optional entry points.
 
 ### OpenAI / Codex-Compatible Installation Optional
 
-If you use an OpenAI / Codex environment that supports Skill installation, run:
+If you use an OpenAI / Codex environment that supports Skill installation, use the full installer script:
 
 ```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo finebyme99/zongteng-brand-poster --path . --name zongteng-brand-poster
+./scripts/install-codex-full.sh
 ```
 
-Restart the corresponding agent after installation.
+Or use the official installer, but install the subdirectory. Do not use `--path .`:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo finebyme99/zongteng-brand-poster --path zongteng-brand-poster --name zongteng-brand-poster --method git
+```
+
+The old `--path .` command may install only root files under Codex sparse checkout and miss `references/`, `assets/`, and `scripts/`. Restart the corresponding agent after installation.
 
 ### Guided Brief Fields
 
-When details are missing, the agent guides you through:
+For new poster tasks, the agent must guide you first and wait for your answer. It should only generate directly when you explicitly say "directly generate", "decide for me", "use defaults", or equivalent.
+
+The guided fields are:
 
 - Visual style: choose a sample style, mix two styles, describe the desired style, or leave it blank for automatic selection
 - Audience
@@ -248,6 +268,8 @@ Important rules:
 
 - Do not generate PPT/PPTX by default.
 - Do not create slide decks.
+- Do not generate PPT-style posters: avoid centered headline plus equal cards, pale grid plus rings/icons, and dashboard-like information pages.
+- Use a strong hero visual or campaign-poster concept: brush energy, IP/mascot hero, editorial collage, tech arena, motion background, or equivalent.
 - Do not use AI image generation for a full poster containing Chinese text.
 - Keep Chinese titles, body copy, dates, departments, and names as real HTML text before browser export.
 - Use bundled original logo assets. Do not redraw, recolor, stretch, or distort the logo.
@@ -257,8 +279,8 @@ Important rules:
 Use the bundled export script:
 
 ```bash
-node scripts/export-html-poster.mjs poster.html poster.png --width 1080 --height 1440
-node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height 1440 --pdf
+node zongteng-brand-poster/scripts/export-html-poster.mjs poster.html poster.png --width 1080 --height 1440
+node zongteng-brand-poster/scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height 1440 --pdf
 ```
 
 The script uses Playwright. If Chromium is missing on first run, follow the Playwright prompt to install it.
@@ -266,7 +288,7 @@ The script uses Playwright. If Chromium is missing on first run, follow the Play
 ### Example Prompts
 
 ```text
-Read AGENTS.md and create a 1080x1440 Zongteng value poster for Win-Win. Make it energetic and employee-facing.
+Read zongteng-brand-poster/AGENTS.md and create a 1080x1440 Zongteng value poster for Win-Win. Make it energetic and employee-facing.
 ```
 
 ```text
@@ -288,14 +310,17 @@ Create a long poster explaining a Zongteng culture activity flow. Use a Bento Gr
 ├── AGENTS.md
 ├── CLAUDE.md
 ├── GEMINI.md
-├── SKILL.md
 ├── .cursor/rules/zongteng-brand-poster.mdc
 ├── .cursorrules
 ├── .windsurfrules
-├── agents/openai.yaml
-├── references/
-├── assets/
-└── scripts/
+├── scripts/install-codex-full.sh
+└── zongteng-brand-poster/
+    ├── AGENTS.md
+    ├── SKILL.md
+    ├── agents/openai.yaml
+    ├── references/
+    ├── assets/
+    └── scripts/
 ```
 
 ## Notes
