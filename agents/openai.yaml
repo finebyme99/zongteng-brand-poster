@@ -1,0 +1,5 @@
+interface:
+  display_name: "Zongteng Brand Poster"
+  short_description: "Create Zongteng branded culture posters"
+  brand_color: "#051D49"
+  default_prompt: "Use $zongteng-brand-poster to create a Zongteng-branded culture poster."
