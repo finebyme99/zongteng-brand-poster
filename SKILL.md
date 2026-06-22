@@ -59,7 +59,7 @@ When using guided mode, ask all key questions together instead of one-by-one. If
 
 Include:
 
-- Poster visual style. Offer the style cards in `assets/style-reference-cards/style-reference-overview.png` and list the style names from `references/visual-style-catalog.md`.
+- Poster visual style. Offer the style cards in `assets/style-reference-cards/style-reference-overview.png`, list the style names from `references/visual-style-catalog.md`, and let the user either choose a built-in style, mix two built-in styles, or describe the desired style in natural language.
 - Audience: employees, managers, candidates, partners/customers, executives, or public/external.
 - Format: vertical poster, long poster, square social card, meeting-room 16:9 screen, horizontal banner, or print.
 - Content layout: hero statement, event announcement, value/IP card, timeline/agenda, data/report, multi-section long poster, or free layout.
@@ -68,6 +68,8 @@ Include:
 - Other constraints: tone, colors to avoid, deadline, export type, editable source needs, or any required text.
 
 Allow the user to leave any field blank. Infer missing fields from the user's topic and explain only the important assumptions.
+
+If the user describes a desired style instead of choosing a style card, translate the description into concrete design attributes: mood, typography, layout density, color temperature, image/texture treatment, and motion/interaction-inspired details. Match it to the closest one or two catalog styles when possible; if no catalog style fits, create a custom HTML/CSS poster direction while keeping the Zongteng logo, brand colors, values/IP mapping, and real-text output rules intact.
 
 ## Brand Checks
 

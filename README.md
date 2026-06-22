@@ -20,7 +20,7 @@ This is a Codex Skill for creating Zongteng-branded posters and culture visuals.
 - 生成纵腾集团品牌海报、文化海报、活动海报、价值观海报、员工关怀海报、评优/表彰海报。
 - 支持 HRAS / 人力综合条线相关海报。
 - 支持会议室投屏、飞书传播图、长图海报、方图、横幅、A4/A3 打印海报等格式。
-- 通过引导式问题收集需求，也支持用户不填写完整信息，由 Codex 根据主题自动判断风格、受众、版式和文案。
+- 通过引导式问题收集需求，也支持用户选择内置风格、混合风格、描述期望风格，或不填写完整信息由 Codex 自动判断。
 - 默认使用 HTML/CSS 生成海报，再导出 PNG/PDF，避免 AI 直接生图导致中文文字错乱。
 
 ### 安装方式
@@ -49,7 +49,7 @@ Use $zongteng-brand-poster to create a Zongteng culture poster.
 
 如果信息不完整，Skill 会引导你填写：
 
-- 海报视觉风格
+- 海报视觉风格：可选示例风格、混合两个风格、直接描述期望风格，或留空自动判断
 - 面向人群
 - 海报尺寸/格式
 - 内容布局
@@ -65,7 +65,7 @@ Use $zongteng-brand-poster to create a Zongteng culture poster.
 
 ### 可选视觉风格
 
-内置 12 个海报视觉方向：
+内置 12 个海报视觉方向，参考前沿网页设计站点中的首屏、作品集、互动站和设计灵感库趋势，重新转化为海报风格卡：
 
 - 极简商务
 - 新粗野主义
@@ -73,14 +73,14 @@ Use $zongteng-brand-poster to create a Zongteng culture poster.
 - 瑞士网格
 - Bento 信息卡
 - 软萌 3D IP
-- 玻璃科技感
+- 液态玻璃科技
 - 杂志拼贴
-- 赛博霓虹
+- 赛博数据
 - 触感纸艺
-- 超现实渐变
+- 液态超现实
 - 温暖人文
 
-这些风格不是 PPT 模板，而是海报视觉方向。最终产物应是单张海报、长图海报或屏幕海报。
+这些风格不是 PPT 模板，也不是直接复制网页截图，而是可用 HTML/CSS 落地的海报视觉方向。你也可以直接描述想要的感觉，例如“像高端科技官网首屏”“像设计工作室作品集”“更年轻、更有冲击力”，Skill 会映射到最接近的风格或生成自定义方向。
 
 ### 输出原则
 
@@ -136,7 +136,7 @@ node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height
 - Creates Zongteng Group brand posters, culture posters, campaign posters, value posters, employee care posters, and recognition posters.
 - Supports HRAS / People Operations posters.
 - Supports meeting-room screen posters, Feishu/social images, long posters, square cards, banners, and A4/A3 print posters.
-- Guides users through a short brief, while also supporting automatic decisions when users leave fields blank.
+- Guides users through a short brief, while supporting built-in style choices, mixed styles, custom style descriptions, and automatic decisions when users leave fields blank.
 - Uses HTML/CSS first, then exports PNG/PDF, so Chinese text remains accurate and readable.
 
 ### Installation
@@ -165,7 +165,7 @@ Use $zongteng-brand-poster to create a Zongteng value poster about Respect for a
 
 When details are missing, the Skill guides you through:
 
-- Visual style
+- Visual style: choose a sample style, mix two styles, describe the desired style, or leave it blank for automatic selection
 - Audience
 - Poster format
 - Content layout
@@ -181,7 +181,7 @@ Use $zongteng-brand-poster to create an internal campaign poster. Decide the res
 
 ### Visual Style Options
 
-The Skill includes 12 poster style directions:
+The Skill includes 12 poster style directions, refreshed from current web-design inspiration patterns such as hero pages, portfolios, interactive sites, and curated design galleries:
 
 - Minimal Business
 - Neo Brutalism
@@ -189,14 +189,14 @@ The Skill includes 12 poster style directions:
 - Swiss Grid
 - Bento Grid
 - Soft 3D Mascot
-- Glass Tech
+- Liquid Glass Tech
 - Editorial Collage
-- Cyber Neon
+- Neon Data Dash
 - Tactile Paper
-- Surreal Gradient
+- Liquid Gradient World
 - Warm Humanist
 
-These are poster design directions, not PowerPoint templates. The expected output is a single poster, a long poster, or a screen poster.
+These are poster design directions, not PowerPoint templates or copied website screenshots. You can also describe the style you want, such as "premium tech landing page", "design studio portfolio", or "younger and more high-impact"; the Skill will map it to the closest style or create a custom Zongteng-compliant direction.
 
 ### Output Principles
 

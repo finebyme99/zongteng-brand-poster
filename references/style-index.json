@@ -4,9 +4,13 @@
     "selection": "Read this compact index first to select a poster style family.",
     "details": "After selecting a family, read the listed reference files only.",
     "assets": "Use asset_map entries to place exact logo and culture assets.",
-    "visual_styles": "Use visual_style_options to guide the user's style choice. Read visual-style-catalog.md for full details."
+    "visual_styles": "Use visual_style_options to guide the user's style choice. Users may choose a built-in style, mix styles, describe a desired style, or leave it blank. Read visual-style-catalog.md for full details."
   },
   "visual_style_overview": "assets/style-reference-cards/style-reference-overview.png",
+  "custom_visual_style": {
+    "supported": true,
+    "instruction": "If the user describes the desired style instead of choosing a sample, extract mood, typography, layout density, color, texture, and imagery cues. Map the description to the closest built-in style or blend two styles. Use named websites only as inspiration; do not copy protected screenshots, proprietary illustrations, or exact layouts."
+  },
   "visual_style_options": [
     {
       "slug": "minimal-business",
@@ -46,7 +50,7 @@
     },
     {
       "slug": "glass-tech",
-      "name": "玻璃科技感 / Glass Tech",
+      "name": "液态玻璃科技 / Liquid Glass Tech",
       "reference_card": "assets/style-reference-cards/07-glass-tech.png",
       "best_for": "Digitalization, AI, HRAS platforms, technology service."
     },
@@ -58,7 +62,7 @@
     },
     {
       "slug": "cyber-neon",
-      "name": "赛博霓虹 / Cyber Neon",
+      "name": "赛博数据 / Neon Data Dash",
       "reference_card": "assets/style-reference-cards/09-cyber-neon.png",
       "best_for": "Tech launches, battle reports, AI/data topics, countdowns."
     },
@@ -70,7 +74,7 @@
     },
     {
       "slug": "surreal-gradient",
-      "name": "超现实渐变 / Surreal Gradient",
+      "name": "液态超现实 / Liquid Gradient World",
       "reference_card": "assets/style-reference-cards/11-surreal-gradient.png",
       "best_for": "Future vision, innovation, festival visuals, campaign teasers."
     },

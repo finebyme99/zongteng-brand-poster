@@ -10,7 +10,7 @@ Show the style overview image first when the UI supports images:
 
 Then ask:
 
-1. Poster visual style: choose one from `visual-style-catalog.md`, mix two styles, or leave blank for automatic selection.
+1. Poster visual style: choose one from `visual-style-catalog.md`, mix two built-in styles, describe the desired style in your own words, or leave blank for automatic selection.
 2. Audience: all employees, frontline teams, managers, executives, candidates, partners/customers, visitors/public, or other.
 3. Poster format: vertical `1080 x 1440`, long poster, square `1080 x 1080`, meeting-room `1920 x 1080`, horizontal banner, A4/A3 print, or other.
 4. Content layout: hero slogan, event announcement, value/IP card, timeline/agenda, data/report, multi-section long poster, story/case, or free layout.
@@ -19,6 +19,16 @@ Then ask:
 7. Other requirements: tone, colors to avoid, mandatory wording, export type, deadline, editable source, or approval constraints.
 
 Do not ask whether the user wants PPT. This skill creates posters. If an export type is requested, offer HTML source, PNG, or PDF.
+
+## Custom Style Descriptions
+
+When the user describes a style instead of choosing a sample, do not force them back into the menu. Parse the description into:
+
+- Mood: formal, energetic, youthful, warm, futuristic, premium, playful, calm, editorial, campaign-like.
+- Visual language: big typography, Bento cards, glass layers, strict grid, collage, paper texture, neon/data, 3D/soft IP, photo-led, high-saturation color, restrained corporate minimalism.
+- Usage constraints: audience, readability distance, amount of copy, brand formality, and whether values/IP assets should appear.
+
+Then map the description to the closest built-in style or a blend of two styles. If the user says "像某个网站/品牌/网页首屏", use it as directional inspiration only. Do not copy protected screenshots, illustrations, or layouts directly; recreate an original poster direction with Zongteng assets and real HTML text.
 
 ## Automatic Defaults
 

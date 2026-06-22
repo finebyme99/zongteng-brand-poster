@@ -100,9 +100,9 @@ Use these original reference cards to help users choose a poster visual directio
 - Swiss Grid: `assets/style-reference-cards/04-swiss-grid.png`
 - Bento Grid: `assets/style-reference-cards/05-bento-data.png`
 - Soft 3D Mascot: `assets/style-reference-cards/06-soft-3d-ip.png`
-- Glass Tech: `assets/style-reference-cards/07-glass-tech.png`
+- Liquid Glass Tech: `assets/style-reference-cards/07-glass-tech.png`
 - Editorial Collage: `assets/style-reference-cards/08-editorial-collage.png`
-- Cyber Neon: `assets/style-reference-cards/09-cyber-neon.png`
+- Neon Data Dash: `assets/style-reference-cards/09-cyber-neon.png`
 - Tactile Paper: `assets/style-reference-cards/10-tactile-paper.png`
-- Surreal Gradient: `assets/style-reference-cards/11-surreal-gradient.png`
+- Liquid Gradient World: `assets/style-reference-cards/11-surreal-gradient.png`
 - Warm Humanist: `assets/style-reference-cards/12-warm-humanist.png`
