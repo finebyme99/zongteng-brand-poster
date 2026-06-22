@@ -1,5 +1,10 @@
 # Zongteng Brand Poster Skill
 
+<p align="center">
+  <a href="#中文说明"><img src="assets/readme/button-zh.svg" alt="中文"></a>
+  <a href="#english-guide"><img src="assets/readme/button-en.svg" alt="English"></a>
+</p>
+
 面向纵腾集团品牌与文化海报的 Codex Skill。安装后，用户无需每次重复提供纵腾 logo、品牌色、价值观 IP、HRAS 标识或投屏规范，即可通过引导式问答生成带纵腾识别度的海报。
 
 This is a Codex Skill for creating Zongteng-branded posters and culture visuals. After installation, users can generate posters with Zongteng logo assets, brand colors, value IP mascots, HRAS identity, and meeting-room poster rules without re-uploading brand materials each time.
@@ -7,6 +12,8 @@ This is a Codex Skill for creating Zongteng-branded posters and culture visuals.
 ![Style reference overview](assets/style-reference-cards/style-reference-overview.png)
 
 ## 中文说明
+
+<p align="right"><a href="#english-guide">Switch to English</a></p>
 
 ### 这个 Skill 能做什么
 
@@ -121,6 +128,8 @@ node scripts/export-html-poster.mjs poster.html poster.pdf --width 1080 --height
 ```
 
 ## English Guide
+
+<p align="right"><a href="#中文说明">切换到中文</a></p>
 
 ### What This Skill Does
 
